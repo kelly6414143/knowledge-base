@@ -1,0 +1,5 @@
+/docs/platform/web/   @web-leads
+/docs/platform/mobile/ @mobile-leads
+/docs/ops/            @sre-team
+/playbooks/           @oncall-leads
+/incidents/           @sre-team @product-ops
