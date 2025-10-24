@@ -47,6 +47,90 @@ for fruit in fruits:
 **Google Colab 練習位置：**  
 [Colab連結：1st.pythonLearning](https://colab.research.google.com/drive/16MIWFxtt1L9parhNKACKb8GhE5rvUwjA#scrollTo=pjLtFaZGKMLF)
 
+**JS&PY差異**  
+
+> 建立變數  
+> 
+> **JS** 
+> ```=javascript 
+> const a = 20 
+> ```
+> **PY** 
+> ```=python 
+> a = 20 
+> ```
+
+> 打印內容  
+> 
+> **JS** 
+> ```=javascript 
+> console.log('123') 
+> console.log(a) 
+> ```
+> **PY** 
+> ```=python 
+> print("123") 
+> print(f"{a}") 
+> ```
+
+> List、Tuple、Dict 基本操作  
+> 
+> **JS** 
+> ```=javascript 
+> const fruits = ["apple", "banana", "mango"] 
+> const person = {name: "Kelly", job: "Frontend Engineer"}  
+> const grades = [90,85.88]
+> ```
+> **PY** 
+> ```=python 
+> fruits = ["apple", "banana", "mango"] 
+> person = {"name": "Kelly", "job": "Frontend Engineer"} 
+> grades = (90, 85, 88) 
+> print(fruits[0])      # apple
+> print(person["job"])  # Frontend Engineer
+> print(sum(grades)/len(grades))
+> ```
+
+> for loop + if 條件判斷  
+> 
+> **JS** 
+> ```=javascript 
+> for fruit in fruits {
+>   if(fruit === "banana"){
+>     console.log("🍌 是香蕉！")
+>   }else{
+>     console.log(f"🥝 這是 {fruit}")
+>   }
+> }
+> ```
+> **PY** 
+> ```=python 
+> for fruit in fruits:
+>    if fruit == "banana":
+>        print("🍌 是香蕉！")
+>    else:
+>        print(f"🥝 這是 {fruit}")
+> ```
+
+> 練習 list comprehension（Python 的「map/filter」）  
+> 
+> **JS** 
+> ```=javascript 
+> const upper_fruits = fruits.map(f=> {
+>    if(f != "banana"){
+>       return f.uppertocase()
+>    }else{
+>       return f 
+>    }
+>   }
+> )
+> ```
+> **PY** 
+> ```=python 
+> upper_fruits = [f.upper() for f in fruits if f != "banana"]
+> print(upper_fruits)
+> ```
+
 ---
 
 ### 💡 個人反思與應用
