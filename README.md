@@ -16,6 +16,7 @@
 - Python學習
   - [Day1-Python 資料分析基礎](./docs/python/1th.md)
   - [Day2-pandas 資料表格操作入門 ](./docs/python/2nd.md)
+  - [Day3-pandas 進行資料清理](./docs/python/3rd.md)
 - 模組
   - [glob 模組](./docs/modules/glob.md)
 <!-- - [平台（Platform）](./docs/platform/README.md)
