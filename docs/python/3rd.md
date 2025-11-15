@@ -137,7 +137,7 @@ David,1500,
 5. 輸出成乾淨版 `clean_sales.csv`。
 
 **Google Colab 練習位置：**  
-[Colab連結：1st.pythonLearning](https://colab.research.google.com/drive/16MIWFxtt1L9parhNKACKb8GhE5rvUwjA#scrollTo=pjLtFaZGKMLF)
+[Colab連結：3rd.pythonLearning](https://colab.research.google.com/drive/1XlPDGynD7uAKyXI2KlzDbJJNsZhzX1gj)
 
 ---
 
