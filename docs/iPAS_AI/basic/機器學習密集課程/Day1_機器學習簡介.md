@@ -1,4 +1,4 @@
-## 機器學習密集課程
+## 機器學習簡介（Day 1）
 
 **日期**：2025-11-04  
 **來源**：Google Developers - Introduction to Machine Learning  
