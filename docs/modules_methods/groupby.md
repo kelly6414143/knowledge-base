@@ -1,4 +1,4 @@
-# 🧠 目標：Group By 分群聚合
+# Group By 分群聚合
 
 ---
 
