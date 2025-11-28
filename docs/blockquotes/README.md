@@ -16,7 +16,7 @@
     - [5. 嵌套引用與列表混用](#5-嵌套引用與列表混用)
     - [6. GitHub 與靜態網站兼容性清單](#6-github-與靜態網站兼容性清單)
     - [7. 常見問題（Gotchas）與解法](#7-常見問題gotchas與解法)
-    - [8. 實用範例集合](#8-實用範例集合)
+    - [8. 實用範例集合(可折疊)](#8-實用範例集合可折疊)
 
 ## 模擬訊息框
 
@@ -141,9 +141,19 @@
 對應的 CSS（放在站點的 stylesheet）示例：
 
 ```css
-.kb-admonition { border-left: 4px solid #2196F3; padding: 0.75em 1em; background:#f3f9ff; color:#222 }
-.kb-admonition-info { border-color:#2196F3 }
-.kb-admonition-warning { border-color:#FF9800; background:#FFF3E0 }
+.kb-admonition {
+  border-left: 4px solid #2196f3;
+  padding: 0.75em 1em;
+  background: #f3f9ff;
+  color: #222;
+}
+.kb-admonition-info {
+  border-color: #2196f3;
+}
+.kb-admonition-warning {
+  border-color: #ff9800;
+  background: #fff3e0;
+}
 ```
 
 註：不要在 GitHub README 中依賴這些自訂 CSS；GitHub 不會載入站點的 CSS。但在工程化站點（MkDocs、VitePress）中，這能提供一致的視覺風格。
@@ -156,7 +166,7 @@
 
 ```markdown
 !!! note "ℹ️ 資訊"
-  這是使用 admonition 的內容，會由主題自動格式化。
+這是使用 admonition 的內容，會由主題自動格式化。
 ```
 
 ### 3. 可存取性（Accessibility）建議
@@ -182,7 +192,7 @@
 
 當在引用區塊內使用列表或其他區塊（code、表格）時，確保每行都加上 `>`，或使用縮進來維持結構。範例如下：
 
-```markdown
+````markdown
 > - 項目一
 > - 項目二
 >
@@ -192,7 +202,7 @@
 > ```bash
 > echo "程式碼在引用內"
 > ```
-```
+````
 
 注意：某些 Markdown 引擎對混合縮排的容錯性不同，必要時使用 HTML 容器以保證佈局。
 
@@ -207,13 +217,13 @@
 - 列表消失或縮排錯亂：檢查 `>` 是否存在於每一行的開頭，或改用 HTML 容器。
 - 圖示在純文字環境顯示為方塊：避免完全依賴 emoji 做為唯一的語意標記，提供文字備註。
 
-### 8. 實用範例集合
+### 8. 實用範例集合(可折疊)
 
 - 站點友好的 admonition（mkdocs-material）：
 
 ```markdown
 !!! tip "✅ 小技巧"
-  使用 `>` 或 `admonition` 皆可，但在工程文件站點上使用 `admonition` 可取得更一致的視覺呈現。
+使用 `>` 或 `admonition` 皆可，但在工程文件站點上使用 `admonition` 可取得更一致的視覺呈現。
 ```
 
 - 可折疊的 Q&A：
@@ -226,4 +236,3 @@
 
 </details>
 ```
-
