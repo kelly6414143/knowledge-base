@@ -5,6 +5,19 @@
 後續再增加
 </details>
 
+## 架構
+
+```=arduino
+Ollama（本地推論）
+     ↑  ↓  localhost:11434
+Node.js RAG Server
+     ├─ ingest：文件 & Axure HTML → 切chunk → Embedding
+     ├─ vectorDB：Chroma（Node版本）存向量
+     ├─ ask：搜尋片段 + Prompt + LLM 回答
+React 前端（可選）
+
+```
+
 ## 偵測電腦是否能跑[7B / 8B]模型
 
 提供資訊如下
@@ -106,6 +119,22 @@ Invoke-WebRequest `
    - 啟動本地 API Server：`node server.js`
 
 ### 後續的/chat 相關 API，都可以在 postman 測試，以及增加前端畫面
+
+## 在 Ollama 裝 embedding 模型
+
+```
+ollama pull nomic-embed-text
+```
+
+> 從 Ollama 官方庫下載 nomic-embed-text  
+> 這是一顆專門用來做向量嵌入（embeddings）的模型  
+> 下載完成後，/api/embeddings 就可以用它來算向量
+
+確認是否存在
+
+```
+ollama list
+```
 
 ---
 
