@@ -1,6 +1,6 @@
 # Q&A
 
-## 影響語意搜尋是否準確為以下:
+## 什麼影響語意搜尋是否準確?
 
 1. Embedding 實際內容
 2. Query 的 embedding
