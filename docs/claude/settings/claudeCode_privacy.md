@@ -266,3 +266,12 @@ Claude Code 可透過 MCP 連很多外部工具與資料源；若你不需要，
 ```
 
 這不是官方範例原文，而是依官方 `permissions.deny` 機制延伸出的實務建議；目的是保護 API key、憑證、Firebase 設定等常見敏感檔。支撐的設定能力來自官方 settings 文件。
+
+## permissions.deny
+
+> 用來阻止特定工具使用；像 Read(./.env) 這種寫法，意思是「禁止 Claude Code 的內建讀檔工具去讀這個路徑」
+
+- 規則格式是 Tool 或 Tool(specifier)。Read(./.env) 就是對 Read 工具加上路徑條件。
+- deny 代表直接禁止；規則判斷順序是 deny -> ask -> allow，先匹配到的規則生效。
+- Read / Edit 路徑規則遵循類似 .gitignore 的路徑比對方式，\* 是單層，\*\* 是遞迴多層。
+- Read(...) 只會擋內建讀檔工具，不會擋 Bash 子程序；也就是說它會擋 Read，但不等於會擋 cat .env 這類 Bash 命令。若你要更強的 OS 層級限制，官方建議搭配 sandbox。
